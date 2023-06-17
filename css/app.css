@@ -1,0 +1,252 @@
+:root {
+    --w-lg: 1440px;
+
+    --tomato: hsl(4, 100%, 67%);
+    --bg-tomato-saturate: rgba(255, 98, 87, 0.10);
+    --tomato-shadow: rgba(255, 98, 87, 0.60);
+    --dark-slate-gray: hsl(235, 18%, 26%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-slate-gray);
+}
+
+.d-none {
+    display: none !important;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    z-index: 20;
+}
+
+.modal__info h1 {
+    font-size: 2.3rem;
+    color: var(--dark-slate-gray);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.modal__info p {
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--charcoal-grey);
+}
+
+.modal__footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    bottom: 0;
+    padding: 1rem 0;
+}
+
+.modal__footer button {
+    display: block;
+    min-width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: var(--dark-slate-gray);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cardNewsLetter {
+    height: 100%;
+    background-color: var(--white);
+}
+
+.cardNewsLetter__head {
+    height: 240px;
+    background: url('/assets/images/illustration-sign-up-mobile.svg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.cardNewsLetter__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.cardNewsLetter__form h1 {
+    font-size: 2.45rem;
+    color: var(--dark-slate-gray);
+}
+
+.cardNewsLetter__form p {
+    line-height: 1.6rem;
+    color: var(--charcoal-grey);   
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.cardNewsLetter__form .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.cardNewsLetter__form .list__item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.cardNewsLetter__form .list__item span {
+    font-size: 1.1rem;
+    color: var(--charcoal-grey);
+    font-weight: 500;
+}
+
+.formEmail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.group-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.group-form .feedback {
+    font-size: 0.8rem;
+    color: var(--tomato);
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.group-form label {
+    color: var(--dark-slate-gray);
+    font-weight: 700;
+}
+
+.group-form input {
+    display: block;
+    outline: none;
+    border: none;
+    outline: 1px solid var(--grey);
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    color: var(--dark-slate-gray);
+    border-radius: 0.5rem;
+}
+
+.btnSend {
+    background-color: var(--dark-slate-gray);
+    font-weight: 600;
+    padding: 1.2rem 1rem;
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.btnSend:active, .btnSend:hover {
+    background-color: var(--tomato);
+    transition: background-color 0.15s linear;
+}
+
+.btnSend:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px 4px var(--tomato-shadow);
+    transition: transform 0.25s linear, box-shadow 0.1s ease;
+}
+
+input.error {
+    outline: 2px solid var(--tomato);
+    color: var(--tomato);
+    background-color: var(--bg-tomato-saturate);
+    transition: border 0.1s ease, color 0.1s ease, background-color 0.1s ease;
+}
+
+@media screen and (min-width: 990px) {
+    body {
+        align-items: center;
+    }
+
+    .modal {
+        width: 400px;
+        height: auto;
+        top: unset;
+        right: 0;
+        left: 0;
+        bottom: unset;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    .modal__footer {
+        position: relative;
+        width: 100%;
+    }
+
+    .cardNewsLetter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        column-gap: 3rem;
+        width: 800px;
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .cardNewsLetter__head {
+        grid-column: 2;
+        grid-row: 1;
+        background-image: url('/assets/images/illustration-sign-up-desktop.svg');
+        height: 100%;
+        border-radius: 1.25rem;
+    }
+
+    .cardNewsLetter__form {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

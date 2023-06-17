@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estiven Mayhuay</title>
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="modal d-none">
+    <div class="modal__head">
+      <img src="/assets/images/icon-list.svg" alt="" width="56">
+    </div>
+
+    <div class="modal__info">
+      <h1 role="heading">Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <strong id="customer"></strong>. Please open it and click the button insdie to confirm your subscription</p>
+    </div>
+
+    <div class="modal__footer">
+      <button role="button" class="btnCloseModal">Dismiss message</button>
+    </div>
+  </div>
+
+  <section class="cardNewsLetter">
+    <article role="article" class="cardNewsLetter__head">
+    </article>
+
+    <article role="article" class="cardNewsLetter__form">
+      <h1 role="heading">Stay updated!</h1>
+      <p role="text">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+
+      <ul class="list" role="list">
+        <li role="listitem" class="list__item">
+          <img src="/assets/images/icon-list.svg" alt="" width="20">
+          <span>Product discovery and building what matters</span>
+        </li>
+        <li role="listitem" class="list__item">
+          <img src="/assets/images/icon-list.svg" alt="" width="20">
+          <span>Measuring to ensure updates are a success</span>
+        </li>
+        <li role="listitem" class="list__item">
+          <img src="/assets/images/icon-list.svg" alt="" width="20">
+          <span>And much more!</span>
+        </li>
+      </ul>
+
+      <form id="frmEmail" class="formEmail" role="form">
+        <div class="group-form">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="estiven@gmail.com" >
+          <span class="feedback d-none"></span>
+        </div>
+
+        <div class="group-form">
+          <button role="button" class="btnSend">Subscribe to monthly newsletter</button>
+        </div>
+      </form>
+    </article>
+  </section>
+
+  <script src="/script/app.js"></script>
+</body>
+</html>
