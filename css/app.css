@@ -231,7 +231,7 @@ input.error {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         column-gap: 3rem;
-        width: 800px;
+        width: 900px;
         height: auto;
         padding: 1.5rem;
         border-radius: 1.5rem;
