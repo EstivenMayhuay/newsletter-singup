@@ -1,3 +1,3 @@
 ## **View**
 
-!["view main"]("https://estivenmayhuay.github.io/newsletter-singup/assets/images/view.png")
+<img src="https://estivenmayhuay.github.io/newsletter-singup/assets/images/view.png" />
